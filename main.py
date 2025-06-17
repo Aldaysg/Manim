@@ -504,11 +504,11 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
             [1, 0, 1, 0],
             [1, 1, 1, -1],
             [0, -1, 2, 1],
-            [1, 0, 0, -1],
-            [1, -1, 0, 0],
-            [1, -1, 1, 0],
-            [1, -1, 1, -1],
-            [1, 0, 0, 0],
+            #[1, 0, 0, -1],
+            #[1, -1, 0, 0],
+            #[1, -1, 1, 0],
+            #[1, -1, 1, -1],
+            #[1, 0, 0, 0],
         ],
         "start_phi": 70 * DEGREES,
         "start_theta": -140 * DEGREES,
@@ -516,6 +516,11 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
     }
 
     def construct(self):
+        diap = Text("10").to_corner(UR,buff=0.4)
+        self.titulo = Tex(r'Cuaterniones').to_corner(UL,buff=0.5)
+        self.add_fixed_in_frame_mobjects(self.titulo,diap)
+        self.add(diap)
+        self.play(Write(self.titulo))
         self.add_q_tracker()
         self.setup_labels()
         self.setup_camera_position()
@@ -532,7 +537,7 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
         left_q_label = QuaternionLabel([1, 0, 0, 0])
         right_q_label = QuaternionLabel([1, 0, 0, 0])
         for label in left_q_label, right_q_label:
-            lp, rp = MathTex("()"), MathTex("()")
+            lp, rp = MathTex("("), MathTex(")")
             lp.next_to(label, LEFT, SMALL_BUFF)
             rp.next_to(label, RIGHT, SMALL_BUFF)
             label.add(lp, rp)
@@ -543,16 +548,16 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
                 "j": RED,
                 "k": BLUE,
             }
-        )
-        left_q_label.next_to(point_label, LEFT)
-        right_q_label.next_to(point_label, RIGHT)
+        ).scale(0.6)
+        left_q_label.next_to(point_label, LEFT).scale(0.6)
+        right_q_label.next_to(point_label, RIGHT).scale(0.6)
         group = VGroup(left_q_label, point_label, right_q_label)
         group.arrange(RIGHT)
         #group.set_width(FRAME_WIDTH - 1)
-        group.to_edge(UP)
+        group.to_edge(UP,buff=1.3)
         self.add_fixed_in_frame_mobjects(BackgroundRectangle(group))
 
-        for label, text in zip(group, ["$q$", "Some 3d point", "$q^{-1}$"]):
+        for label, text in zip(group, ["$q$", "Punto 3d", "$q^{-1}$"]):
             brace = Brace(label, DOWN)
             text_mob = Tex(text)
             if text_mob.get_width() > brace.get_width():
@@ -608,7 +613,7 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
         prism = self.get_unrotated_prism()
         angle, axis = angle_axis_from_quaternion(quaternion)
         prism.rotate(angle=angle, axis=axis, about_point=ORIGIN)
-        return prism
+        return prism.scale(0.8)
 
     def get_axes(self):
         prism = self.prism
@@ -629,7 +634,7 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
                 axes.add(Line(p1, p2))
         axes.set_stroke(GREY_B, 1)
         axes.set_shade_in_3d(True)
-        return axes
+        return axes.scale(0.8)
 
     def change_q(self, value, run_time=3, added_anims=None, **kwargs):
         if added_anims is None:
@@ -680,7 +685,7 @@ class RotationMatrix(ShowSeveralQuaternionRotations):
         ])
         labels = VGroup(*[
             Tex(
-                "Where ", tex, " goes",
+                "Proyección de ", tex, " ",
                 tex_to_color_map={tex: rect.get_color()}
             ).next_to(rect, DOWN)
             for letter, rect in zip(["\\i", "\\j", "k"], column_rects)
