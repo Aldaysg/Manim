@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/entorno/b467e4e7b887c77b9bc9339c1fb917e297ce6594862af955e7934ceb4763640a.mp4",
+      "rev_file": "slides/files/entorno/b467e4e7b887c77b9bc9339c1fb917e297ce6594862af955e7934ceb4763640a_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

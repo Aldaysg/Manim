@@ -1,7 +1,7 @@
 from manim import *
 from manim_slides.slide import Slide
 
-class Portada(Scene):
+class Portada(Slide):
     def construct(self):
         titulo = Tex(r"{0.5\textwidth}\centering Redes neuronales para manipulación de objetos en robots de servicio",tex_environment="minipage")
         sustentante = Tex(r'Germán Alday Salazar')
@@ -13,9 +13,10 @@ class Portada(Scene):
         #sustentante.shift(UP*1)
         director.shift(DOWN)
         self.play(Write(titulo))
+        self.next_slide()
         self.play(Write(sustentante),Write(director))
 
-class division(Scene):
+class division(Slide):
     def construct(self):
         capitulos = Tex(r'Secciones')
         secciones = Tex(r'\begin{itemize} ' \

@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/metodo_pca/617948ddc0e846d7989d6e4ce9d3bf752e0802aa9b587322fb6d5dcbf634c036.mp4",
+      "rev_file": "slides/files/metodo_pca/617948ddc0e846d7989d6e4ce9d3bf752e0802aa9b587322fb6d5dcbf634c036_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

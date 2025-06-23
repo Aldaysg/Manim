@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RotationMatrix/02556bae74141dcf5fb43e9bf468f24b972933d8d59cb4a7a1959c17b58af7b3.mp4",
+      "rev_file": "slides/files/RotationMatrix/02556bae74141dcf5fb43e9bf468f24b972933d8d59cb4a7a1959c17b58af7b3_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

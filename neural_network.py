@@ -1,14 +1,17 @@
 from manim import *
-from manim_ml.neural_network import Convolutional2DLayer, FeedForwardLayer, ImageLayer, NeuralNetwork
+from manim_slides.slide import Slide
+
+#from manim_ml.neural_network import Convolutional2DLayer, FeedForwardLayer, ImageLayer, NeuralNetwork
 #from manim_tikz import Tikz
 #from manim.animation.composition
 
 config.disable_caching = False
 
-class definicion_nn(Scene):
+class definicion_nn(Slide):
 
     def construct(self):
         templ = TexTemplate()
+        diap = Text("13").to_corner(UR,buff=0.4)
         #templ.documentclass = r"\documentclass[preview,dvisvgm]{standalone}"
         templ.add_to_preamble(r"\usepackage{amsmath}")
         templ.add_to_preamble(r"\usepackage{tikz-cd}")
@@ -23,28 +26,9 @@ class definicion_nn(Scene):
         pcd.add_updater(lambda x: x.next_to(mathdef,DOWN,buff=0.5))
         grasp.add_updater(lambda x: x.next_to(mathdef,DOWN*3,buff=0.5))
         
+        self.add(diap)
         self.play(Create(titulo))
         #self.play(titulo.animate.shift(UP*2))
         self.play(titulo.animate.to_edge(UP, buff=0.2))
         self.play(Create(mathdef), Write(pcd), Write(grasp))
         self.play(mathdef.animate.next_to(titulo,DOWN,buff=0.4))
-
-class conv_network(ThreeDScene):
-    def construct(self):
-        # Make the neural network
-        nn = NeuralNetwork([
-                Convolutional2DLayer(1, 7, 3, filter_spacing=0.32),
-                Convolutional2DLayer(3, 5, 3, filter_spacing=0.32),
-                Convolutional2DLayer(5, 3, 3, filter_spacing=0.18),
-                FeedForwardLayer(3),
-                FeedForwardLayer(3),
-            ],
-            layer_spacing=0.25,
-        )
-        # Center the neural network
-        nn.move_to(ORIGIN)
-        self.add(nn)
-        # Make a forward pass animation
-        forward_pass = nn.make_forward_pass_animation(run_time=8.0)
-        # Play animation
-        self.play(forward_pass)

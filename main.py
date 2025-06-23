@@ -1,5 +1,5 @@
 from manim import *
-
+from manim_slides.slide import Slide, ThreeDSlide
 #from orientation import *
 
 class Portada(Scene):
@@ -496,7 +496,7 @@ class Gimbal(VGroup):
             result.add(sector)
         return result
     
-class ShowSeveralQuaternionRotations(ThreeDScene):
+class ShowSeveralQuaternionRotations(ThreeDSlide):
     CONFIG = {
         "quaternions": [
             [0, 1, 0, 0],
@@ -516,7 +516,7 @@ class ShowSeveralQuaternionRotations(ThreeDScene):
     }
 
     def construct(self):
-        diap = Text("10").to_corner(UR,buff=0.4)
+        diap = Text("9").to_corner(UR,buff=0.4)
         self.titulo = Tex(r'Cuaterniones').to_corner(UL,buff=0.5)
         self.add_fixed_in_frame_mobjects(self.titulo,diap)
         self.add(diap)
@@ -661,10 +661,11 @@ class RotationMatrix(ShowSeveralQuaternionRotations):
         self.add_basis_vector_labels()
         self.add_axes()
 
+        diap = Text("7").to_corner(UR,buff=0.4)
+
         title = Tex("Matriz de rotación")
-        title.scale(1.5)
-        title.to_corner(UL)
-        self.add_fixed_in_frame_mobjects(title)
+        title.to_corner(UL,buff=0.5)
+        self.add_fixed_in_frame_mobjects(title,diap)
 
         angle = 75 * DEGREES
         axis = [0.3, 1, 0.3]
@@ -777,8 +778,9 @@ class EulerAnglesAndGimbal(ShowSeveralQuaternionRotations):
 
     def add_title(self):
         title = Tex("Ángulos de Euler")
-        title.scale(1.1)
-        title.to_corner(UL)
+        diap = Text("8").to_corner(UR,buff=0.4)
+        #title.scale(1)
+        title.to_corner(UL,buff=0.5)
         angle_labels = VGroup(
             MathTex("\\psi").set_color(YELLOW),
             MathTex("\\theta").set_color(TEAL_E),
@@ -799,7 +801,7 @@ class EulerAnglesAndGimbal(ShowSeveralQuaternionRotations):
 
         VGroup(title, angle_labels, gl_label).center().to_edge(UP)
 
-        self.add_fixed_in_frame_mobjects(title, angle_labels, gl_label)
+        self.add_fixed_in_frame_mobjects(title, angle_labels, gl_label, diap)
         self.remove(angle_labels)
         self.remove(gl_label)
 
@@ -828,11 +830,11 @@ class EulerAnglesAndGimbal(ShowSeveralQuaternionRotations):
             )
             self.play(
                 tracker.animate.set_value(angle),
-                run_time=3
+                run_time=2
             )
             self.play(FadeOut(line))
             self.wait()
-        self.wait(3)
+        self.wait(1)
         self.play(Write(self.gimbal_lock_label))
         self.play(
             alpha_tracker.animate.set_value(0),
@@ -842,24 +844,24 @@ class EulerAnglesAndGimbal(ShowSeveralQuaternionRotations):
         self.play(
             alpha_tracker.animate.set_value(90 * DEGREES),
             gamma_tracker.animate.set_value(-90 * DEGREES),
-            run_time=3
+            run_time=2
         )
         self.play(
             FadeOut(self.gimbal_lock_label),
             [t.animate.set_value(0) for t in trackers],
-            run_time=3
+            run_time=2
         )
         self.play(
             alpha_tracker.animate.set_value(30 * DEGREES),
             beta_tracker.animate.set_value(120 * DEGREES),
             gamma_tracker.animate.set_value(-50 * DEGREES),
-            run_time=3
+            run_time=2
         )
         self.play(
             alpha_tracker.animate.set_value(120 * DEGREES),
             beta_tracker.animate.set_value(-30 * DEGREES),
             gamma_tracker.animate.set_value(90 * DEGREES),
-            run_time=4
+            run_time=2
         )
         self.play(
             beta_tracker.animate.set_value(150 * DEGREES),
@@ -869,7 +871,7 @@ class EulerAnglesAndGimbal(ShowSeveralQuaternionRotations):
             alpha_tracker.animate.set_value(0),
             beta_tracker.animate.set_value(0),
             gamma_tracker.animate.set_value(0),
-            run_time=4
+            run_time=2
         )
         self.wait()
 

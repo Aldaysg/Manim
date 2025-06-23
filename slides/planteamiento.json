@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/planteamiento/f221847c4fb114ec58cd42daf28db4baa1534745445c0468707041c7ce2361b1.mp4",
+      "rev_file": "slides/files/planteamiento/f221847c4fb114ec58cd42daf28db4baa1534745445c0468707041c7ce2361b1_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

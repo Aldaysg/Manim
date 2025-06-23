@@ -1,23 +1,31 @@
 from manim import *
+from manim_slides.slide import Slide,ThreeDSlide
 from main import RubiksCube
 
-class posicion(ThreeDScene):
+class posicion(ThreeDSlide):
     def construct(self):
-        diap = Text("6").to_corner(UR,buff=0.4)
+        diap = Text("5").to_corner(UR,buff=0.4)
         titulo = Tex(r'Definición de la pose').to_corner(UL,buff=0.5)
+        self.add_fixed_in_frame_mobjects(diap,titulo)
+        self.add(diap,titulo)
         axes = ThreeDAxes()
         ax_label = axes.get_axis_labels()
+        
         RC = RubiksCube().scale(0.5)
         RC.move_to([4,1,2])
-        vec = Arrow3D(ORIGIN,RC.get_center(),color=GREEN)
-        self.add_fixed_in_frame_mobjects(diap,titulo)
+        vec = Vector(RC.get_center(),color=GREEN)
+        coor = vec.coordinate_label(False,3,GREEN)
+        
 
-        self.add(diap,titulo)
+        
         self.set_camera_orientation(phi=60 * DEGREES, theta=-30*DEGREES)
         self.play(Write(axes),Write(ax_label))
         self.play(Create(RC))
         self.wait()
-        self.play(Write(vec))
+        #self.play(Write(vec))
+        #self.play(Write(coor))
+        self.add_fixed_in_frame_mobjects(coor)
+        self.play(Create(vec),Create(coor))
 
 # class orientacion(Scene):
 #     def construct(self):
@@ -38,9 +46,9 @@ class posicion(ThreeDScene):
 #         self.play(Write(titulo),Write(tab))
 
 
-class orientacion(Scene):
+class orientacion(Slide):
     def construct(self):
-        diap = Text("7").to_corner(UR,buff=0.4)
+        diap = Text("6").to_corner(UR,buff=0.4)
         titulo = Tex(r'Representación de orientación').to_edge(UP,buff=0.5)
         rep = Tex(r'\begin{itemize} ' \
         '\item Matrices de rotación ' \

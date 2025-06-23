@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/distribucion_final/fa1c2804cfb93f4a7b810136d30abd1b1a1be87e3efda75e668751482cc15bbc.mp4",
+      "rev_file": "slides/files/distribucion_final/fa1c2804cfb93f4a7b810136d30abd1b1a1be87e3efda75e668751482cc15bbc_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

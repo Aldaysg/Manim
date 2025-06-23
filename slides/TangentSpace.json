@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/TangentSpace/20c841c9aad92574cdb51a415a3925178e44d8d444a7dea24fc0ce4e82c1ff56.mp4",
+      "rev_file": "slides/files/TangentSpace/20c841c9aad92574cdb51a415a3925178e44d8d444a7dea24fc0ce4e82c1ff56_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

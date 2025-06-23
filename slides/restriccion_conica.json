@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/restriccion_conica/5e0d13eda6b4e9c70d8c845941934b19bdae906b5ddcb847ed9187e526fa23ab.mp4",
+      "rev_file": "slides/files/restriccion_conica/5e0d13eda6b4e9c70d8c845941934b19bdae906b5ddcb847ed9187e526fa23ab_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

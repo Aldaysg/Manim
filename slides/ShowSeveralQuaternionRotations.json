@@ -1,0 +1,21 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/ShowSeveralQuaternionRotations/aaa3ce4ea37006774c93f4b35632f7175765e254033263ff0f88287ecd4f0903.mp4",
+      "rev_file": "slides/files/ShowSeveralQuaternionRotations/aaa3ce4ea37006774c93f4b35632f7175765e254033263ff0f88287ecd4f0903_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}
