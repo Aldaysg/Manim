@@ -9,8 +9,20 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/definicion_nn/b0d024c305733aa7ed6990b2840f3836ea9f4e87593060ea7762cacc8370ab7e.mp4",
-      "rev_file": "slides/files/definicion_nn/b0d024c305733aa7ed6990b2840f3836ea9f4e87593060ea7762cacc8370ab7e_reversed.mp4"
+      "file": "slides/files/definicion_nn/f986c7decc0064a9d8ca9a7d6421f080a38bf93e63be7f2b7b96064e22f501f6.mp4",
+      "rev_file": "slides/files/definicion_nn/f986c7decc0064a9d8ca9a7d6421f080a38bf93e63be7f2b7b96064e22f501f6_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/definicion_nn/eeba6e861e82167829b59236a325dabf8be70fdb19e45339858790147c3a1e8a.mp4",
+      "rev_file": "slides/files/definicion_nn/eeba6e861e82167829b59236a325dabf8be70fdb19e45339858790147c3a1e8a_reversed.mp4"
     }
   ],
   "resolution": [
