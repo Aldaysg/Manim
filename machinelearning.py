@@ -15,8 +15,8 @@ class BasicScene(ThreeDSlide):
     # The code for generating our scene goes here
     def construct(self):
         # Make the neural network
-        diap = Text("11").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Redes neuronales convolucionales').to_corner(UL,buff=0.5)
+        diap = Text("6").to_corner(UR,buff=0.4)
+        titulo = Tex(r'Convolutional neural networks').to_corner(UL,buff=0.5)
         conv = MathTex(r'\mathbf{C}(x,y)=\mathbf{I} * \mathbf{K} =\sum_{i=-a}^a{\sum_{j=-b}^b{ I (i,j)K(x-i,y-j)}}')
         self.add_fixed_in_frame_mobjects(diap,titulo)
 
@@ -48,8 +48,8 @@ class fullyconnected(ThreeDSlide):
     # The code for generating our scene goes here
     def construct(self):
         # Make the neural network
-        diap = Text("10").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Redes neuronales artificiales').to_corner(UL,buff=0.5)
+        diap = Text("5").to_corner(UR,buff=0.4)
+        titulo = Tex(r'Artificial neural networks').to_corner(UL,buff=0.5)
         layer = MathTex(r'\mathbf{a}^{(n+1)} &= \sigma \left(  \mathbf{W}^{(n)} \mathbf{a}^{(n)} + \mathbf{b}^{(n)} \right)')
         self.add_fixed_in_frame_mobjects(diap,titulo)
 

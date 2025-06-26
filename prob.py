@@ -93,7 +93,7 @@ def mixture_to_mobj(show_mix = False, show_model = False):
     np.random.seed(1)
     data=np.concatenate((np.random.normal(1, .2, 5000), np.random.normal(1.6, .3, 2500)))
     fig = plt.figure(dpi=300)
-    y,x,_=plt.hist(data, 100, alpha=.3, label='Distribución real',color='lightsteelblue')
+    y,x,_=plt.hist(data, 100, alpha=.3, label='Real distribution',color='lightsteelblue')
     x=(x[1:]+x[:-1])/2 # for len(x)==len(y)
 
     #x, y inputs can be lists or 1D numpy arrays
@@ -111,11 +111,11 @@ def mixture_to_mobj(show_mix = False, show_model = False):
     #plot combined...
     
     if show_model:
-        plt.plot(x_fit, bimodal(x_fit, *params), color='lavender', lw=3, label='Función de densidad aproximada')
+        plt.plot(x_fit, bimodal(x_fit, *params), color='lavender', lw=3, label='Approximate density function')
     #...and individual Gauss curves
     if show_mix:
-        plt.plot(x_fit, gauss(x_fit, *params[:3]), color='royalblue', lw=2, ls="--", label='Distribución 1')
-        plt.plot(x_fit, gauss(x_fit, *params[3:]), color='royalblue', lw=2, ls=":", label='Distribución 2')
+        plt.plot(x_fit, gauss(x_fit, *params[:3]), color='royalblue', lw=2, ls="--", label='Kernel 1')
+        plt.plot(x_fit, gauss(x_fit, *params[3:]), color='royalblue', lw=2, ls=":", label='Kernel 2')
     #and the original data points if no histogram has been created before
     #plt.scatter(x, y, marker="X", color="black", label="original data")
     plt.legend()
@@ -130,8 +130,8 @@ def mixture_to_mobj(show_mix = False, show_model = False):
 
 class mezclas(Slide):
     def construct(self):
-        diap = Text("13").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Modelo de mezclas').to_corner(UL,buff=0.5)
+        diap = Text("9").to_corner(UR,buff=0.4)
+        titulo = Tex(r'Mixture Model').to_corner(UL,buff=0.5)
         #data generation
         img = mixture_to_mobj()
         img2 = mixture_to_mobj(show_mix=True)

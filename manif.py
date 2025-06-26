@@ -26,8 +26,8 @@ class TangentSpace(ThreeDSlide):
             checkerboard_colors=[RED_D, RED_E],
             resolution=(15, 32)).scale(2)
 
-        diap = Text("14").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Modelo geodésico').to_corner(UL,buff=0.5)
+        diap = Text("10").to_corner(UR,buff=0.4)
+        titulo = Tex(r'Geodesic model').to_corner(UL,buff=0.5)
         self.add_fixed_in_frame_mobjects(diap,titulo)
 
         self.set_camera_orientation(phi=60 * DEGREES)
@@ -94,8 +94,8 @@ class GradientDescentAnimation(ThreeDSlide):
             v_range=(-2, 2),
             fill_opacity=0.5
         )
-        diap = Text("12").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Descenso del gradiente').to_corner(UL,buff=0.5)
+        diap = Text("7").to_corner(UR,buff=0.4)
+        titulo = Tex(r'Gradient descent').to_corner(UL,buff=0.5)
 
         templ = TexTemplate()
         templ.add_to_preamble(r"\usepackage{physics}")

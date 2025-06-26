@@ -26,6 +26,7 @@ def plot_vmf_density(ax, x, y, z, vertices, mu, kappa):
                     facecolors=plt.cm.viridis(pdfnorm(pdf_values)))
     ax.set_aspect('equal')
     ax.view_init(azim=-130, elev=-40)
+    ax.dist = 4
     ax.axis('off')
     #ax.set_title(rf"$\kappa={kappa}$")
 
@@ -43,8 +44,8 @@ def plot_to_mobj(mu, k):
 
 class vmf(Slide):
     def construct(self):
-        diap = Text("15").to_corner(UR,buff=0.4)
-        titulo = Tex(r'Modelo de mezclas VMF').to_corner(UL,buff=0.5)
+        diap = Text("11").to_corner(UR,buff=0.4)
+        titulo = Tex(r'VMF Kernel Mixture Model').to_corner(UL,buff=0.5)
         templ = TexTemplate()
         templ.add_to_preamble(r"\usepackage{physics}")
         templ.add_to_preamble(r"\usepackage{amsmath}")

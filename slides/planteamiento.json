@@ -9,8 +9,20 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/planteamiento/f221847c4fb114ec58cd42daf28db4baa1534745445c0468707041c7ce2361b1.mp4",
-      "rev_file": "slides/files/planteamiento/f221847c4fb114ec58cd42daf28db4baa1534745445c0468707041c7ce2361b1_reversed.mp4"
+      "file": "slides/files/planteamiento/c8298f4a3d984bbdcc270d5eac662521df8133c526243cba7955355bc2ea286e.mp4",
+      "rev_file": "slides/files/planteamiento/c8298f4a3d984bbdcc270d5eac662521df8133c526243cba7955355bc2ea286e_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/planteamiento/f4048a73329fff900c7607f4161ce2fa62ee125ded6469f532dd0421c8f17eba.mp4",
+      "rev_file": "slides/files/planteamiento/f4048a73329fff900c7607f4161ce2fa62ee125ded6469f532dd0421c8f17eba_reversed.mp4"
     }
   ],
   "resolution": [

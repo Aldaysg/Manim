@@ -2,10 +2,12 @@ from manim import *
 from manim_slides.slide import Slide, ThreeDSlide
 #from orientation import *
 
-class Portada(Scene):
+class Portada(Slide):
     def construct(self):
         titulo = Tex(r"{0.5\textwidth}\centering Redes neuronales para manipulación de objetos en robots de servicio",tex_environment="minipage")
         #self.add(titulo)
+        fi = ImageMobject("./figs/logo-fi.png")
+        unam = ImageMobject("./figs/logo-unam.png")
         self.play(Write(titulo))
 
 class DefaultTemplate(Scene):
@@ -516,8 +518,8 @@ class ShowSeveralQuaternionRotations(ThreeDSlide):
     }
 
     def construct(self):
-        diap = Text("9").to_corner(UR,buff=0.4)
-        self.titulo = Tex(r'Cuaterniones').to_corner(UL,buff=0.5)
+        diap = Text("4").to_corner(UR,buff=0.4)
+        self.titulo = Tex(r'Quaternions').to_corner(UL,buff=0.5)
         self.add_fixed_in_frame_mobjects(self.titulo,diap)
         self.add(diap)
         self.play(Write(self.titulo))
@@ -557,7 +559,7 @@ class ShowSeveralQuaternionRotations(ThreeDSlide):
         group.to_edge(UP,buff=1.3)
         self.add_fixed_in_frame_mobjects(BackgroundRectangle(group))
 
-        for label, text in zip(group, ["$q$", "Punto 3d", "$q^{-1}$"]):
+        for label, text in zip(group, ["$q$", "3d point", "$q^{-1}$"]):
             brace = Brace(label, DOWN)
             text_mob = Tex(text)
             if text_mob.get_width() > brace.get_width():
